@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Palaniya | Embedded Engineer</title>
+    <style>
+        /* --- 1. RESET & VARIABLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* A clean, professional dark blue palette */
+            --bg-main: #0f172a;       /* Dark Slate */
+            --bg-card: #1e293b;       /* Lighter Slate */
+            --text-primary: #f8fafc;  /* White-ish */
+            --text-secondary: #94a3b8;/* Grey */
+            --accent: #38bdf8;        /* Sky Blue */
+            --accent-hover: #0ea5e9;  /* Darker Blue */
+        }
+
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* --- 2. NAVIGATION --- */
+        nav {
+            background: var(--bg-card);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* --- 3. LAYOUT UTILITIES --- */
+        section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--bg-card);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Buttons Container */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--bg-main);
+        }
+        
+        .btn-outline {
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-hover);
+            color: white;
+            border-color: var(--accent-hover);
+        }
+
+        /* --- 5. CARDS (Education & Projects) --- */
+        .card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .card h3 { margin-bottom: 5px; }
+        .card-subtitle { color: var(--accent); font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        
+        /* --- 6. SKILLS TAGS --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 50px; /* Pill shape */
+            font-size: 0.9rem;
+        }
+
+        /* --- 7. FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--bg-card);
+            margin-top: 50px;
+        }
+        
+        /* Mobile Tweaks */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .social-links { flex-direction: column; align-items: stretch; }
+            .btn { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <img src="profile.JPG" alt="Karan Palaniya">
+        
+        <h1>Karan Palaniya</h1>
+        <p>Junior Embedded Engineer | IoT Enthusiast</p>
+        
+        <div class="social-links">
+            <a href="Karan's resume_bonrix embedded innovation .pdf" target="_blank" class="btn btn-primary">View Resume</a>
+            
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                I am a final-year Electronics & Communication Engineering student at Government Engineering College, Bhavnagar. 
+                My passion lies in bridging the gap between hardware and software. 
+                <br><br>
+                I have hands-on experience designing PCBs, programming microcontrollers (Arduino, ESP32), and building IoT solutions. 
+                I am looking for a challenging role as a Junior Embedded Engineer to apply my skills in real-world applications.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div class="card">
+            <h3>B.E. Electronics & Communication</h3>
+            <span class="card-subtitle">Government Engineering College, Bhavnagar | 2022 - 2026</span>
+            <p><strong>CGPA:</strong> 7.28 (Current)</p>
+            <p><strong>Key Focus:</strong> Embedded Systems, Microprocessors, Analog Circuits.</p>
+        </div>
+
+        <div class="card">
+            <h3>Higher Secondary (HSC)</h3>
+            <span class="card-subtitle">Swaminarayan Gurukul, Bhavnagar | 2022</span>
+            <p>Percentage: 58.15%</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">ESP32 / IoT</span>
+            <span class="skill-tag">ARM Cortex</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Soldering</span>
+            <span class="skill-tag">UART / I2C / SPI</span>
+            <span class="skill-tag">VS Code</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="card">
+            <h3>🔐 Smart Door Lock System</h3>
+            <p>
+                An IoT-based security solution featuring RFID scanning, password keypad entry, and NFC authentication. 
+                Designed to improve home security using low-cost embedded components.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🛒 IoT Smart Shopping Trolley</h3>
+            <p>
+                An automated trolley system that follows the user. It integrates motor drivers and sensors 
+                to create a closed-loop control system, reducing physical effort in supermarkets.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card" style="text-align: center;">
+            
+            
+            <a href="mailto:karanpalaniya9@gmail.com" class="btn btn-outline">Email Me</a>
+            <a href="https://www.linkedin.com/in/karanpalaniya" target="_blank" class="btn btn-outline">LinkedIn</a>
+            <a href="https://github.com/Karann0510" target="_blank" class="btn btn-outline">GitHub</a>
+            <br><br>
+            <p><strong>Phone:</strong> +91 63533 07560</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Karan Palaniya. Built with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
